@@ -5,26 +5,60 @@ const { generateMarkdown } = require("./utils/generateMarkdown")
 
 // Array of questions
 const questions = [{
-    type: "",
-    name: "",
-    message: ""
+    type: "input",
+    name: "ProjectTitle",
+    message: "What is the title of your application?"
 }, 
 {
-    type: "",
-    
+    type: "input",
+    name: "Description",
+    message: "Please give a succinct overview of your application:"
 }, 
 {
-
+    type: "input",
+    name: "Installation",
+    message: "What dependencies/packages will users need to install for this application?"
 }, 
 {
-
+    type: "input",
+    name: "Usage",
+    message: "What do users need to do in order to run this application?"
 }, 
 {
-
+    type: "confirm",
+    name: "Contributions",
+    message: "Would you like to include contribution guidelines for this application?"
 }, 
+{
+    type: "input",
+    name: "Tests",
+    message: "How should users test your application?"
+},
+{
+    type: "confirm",
+    name: "License",
+    message: "Would you like to include a license for your application?"
+},
+{
+    type: "list",
+    name: "LicenseType",
+    message: "Which license would you like to use for your application?",
+    choices: ["MIT", "Creative Commons Attribution", "Public Domain Mark", "Apache"],
+    when: (answers) => answers.License === "Yes"
+},
+{
+    type: "input",
+    name: "Username",
+    message: "What is your GitHub username?"
+},
+{
+    type: "input",
+    name: "Email",
+    message: "What is your email address?"
+}
 ];
 
-// TODO: Create a function to write README file
+// writes README file with user input, displays success message to user if file created
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
         console.log(data),
@@ -32,11 +66,11 @@ function writeToFile(fileName, data) {
     })
 }
 
-// TODO: Create a function to initialize app
+// initializes app, runs through questions array, calls writeToFile function with desired file name and generated markdown text as arguments
 function init() {
     inquirer.prompt(questions)
     .then((data) => {
-        writeToFile("./sampleREADME/README.md", generateMarkdown(data));
+        writeToFile("README.md", generateMarkdown(data));
         console.log(data);
     })
 }
