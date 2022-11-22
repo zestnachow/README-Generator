@@ -67,7 +67,7 @@ const questions = [{
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
         console.log(data),
-        err ? console.log(err) : console.log("Thank you for your input! A READMe.md file has been successfully generated from your responses.")
+        err ? console.log(err) : console.log("Thank you for your input! A README.md file has been successfully generated from your responses.")
     })
 }
 
