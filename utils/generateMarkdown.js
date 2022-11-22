@@ -150,4 +150,4 @@ If you have any questions about this application, feel free to contact ${data.Co
 `;
 }
 
-module.exports = { generateMarkdown, renderLicenseSection, renderContributingSection};
+module.exports = { generateMarkdown, renderLicenseSection };
