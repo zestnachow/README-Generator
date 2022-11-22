@@ -44,7 +44,7 @@ const questions = [{
     name: "LicenseType",
     message: "Which license would you like to use for your application?",
     choices: ["MIT", "Creative Commons Attribution", "GNU GPL v3", "Apache"],
-    when: (answers) => answers.License === "Yes"
+    when: (answers) => answers.License === true
 },
 {
     type: "input",
