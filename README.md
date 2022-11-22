@@ -1,8 +1,8 @@
 
 # README-Generator
-https://github.com/zestnachow/README-Generator
+Repo link: https://github.com/zestnachow/README-Generator
 
-https://drive.google.com/file/d/1y5ZPj5thxRt6r3KcSPD_MMsYCTDhCwon/view
+Video walkthrough link: https://drive.google.com/file/d/1y5ZPj5thxRt6r3KcSPD_MMsYCTDhCwon/view
 # Description
 This application allows users to generate comprehensive README files based on command-line inputs.
 # Table of Contents
