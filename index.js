@@ -43,8 +43,13 @@ const questions = [{
     type: "list",
     name: "LicenseType",
     message: "Which license would you like to use for your application?",
-    choices: ["MIT", "Creative Commons Attribution", "Public Domain Mark", "Apache"],
+    choices: ["MIT", "Creative Commons Attribution", "GNU GPL v3", "Apache"],
     when: (answers) => answers.License === "Yes"
+},
+{
+    type: "input",
+    name: "Contributors",
+    message: "Please list the full names of all contributors to your application:"
 },
 {
     type: "input",
