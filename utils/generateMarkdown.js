@@ -122,8 +122,7 @@ We encourage inclusive and professional interactions on our project. We welcome 
 
 // Generates README.md file based on user inputs
 function generateMarkdown(data) {
-  return `
-# ${data.ProjectTitle}
+  return `# ${data.ProjectTitle}
 https://github.com/${data.Username}/${data.ProjectTitle}
 # Description
 ${data.Description}.
