@@ -24,7 +24,7 @@ function renderLicenseLink(data) {
 
 // If user said no to adding contribution guidelines, return an empty string; otherwise, generate a markdown subheading called Contributing
 function renderContributingLink(data) {
-  if (data.Contributing === false) {
+  if (data.Contributions === false) {
     return "";
   } else {
     return `* [Contributing](#contributing)`
@@ -85,7 +85,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 // If user said no to adding contribution guidelines, return an empty string; otherwise, generate a markdown subsection in the README laying out the guidelines
 function renderContributingSection(data) {
-  if (data.Contributing === false) {
+  if (data.Contributions === false) {
     return "";
   } else {
     return `# Contributing
